@@ -1,9 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
+require('./models/User');
 require('./services/passport');
 mongoose.connect(keys.mongoURI);
-require('./models/User');
+
 const authRoutes = require('./routes/authRoutes');
 // it wants to listen  to 5000 on your machine routed through node to express
 const app = express();
