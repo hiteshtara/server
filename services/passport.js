@@ -17,7 +17,28 @@ passport.deserializeUser((id, done) => {
     done(null, user);
   });
 });
-
+// write a function to retrieve a blob of json
+// make an ajax request use the fetch function
+//https://rallycoding.herokuapp.com/api/music_albums
+// this traditionall promise chain .then for asynch request
+// fetch resolvs to json another promise is returned
+//
+// now refactor to es6 behind the scenes promise is working
+//step one identify the function using async
+//mark with asynch
+//step 2
+// identify all the promises
+// add await to each promises
+async function fetchAlbumsEs6() {
+  const res = await fetch('https://rallycoding.herokuapp.com/api/music_albums');
+  const json = await res.json();
+  console.log(json);
+}
+function fetchAlbums() {
+  fetch('https://rallycoding.herokuapp.com/api/music_albums')
+    .then(res => res.json())
+    .then(json => console.log(json));
+}
 passport.use(
   new GoogleStrategy(
     {
