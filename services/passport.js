@@ -8,6 +8,16 @@ const User = mongoose.model('users');
 // create new instance of google strategy
 // passport use is generate registry .passport make use of google strategy
 // googelstrategy need client id and client secret. set up your app with google
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
+
+passport.deserializeUser((id, done) => {
+  User.findById(id).then(user => {
+    done(null, user);
+  });
+});
+
 passport.use(
   new GoogleStrategy(
     {
