@@ -4,6 +4,8 @@ import './index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
+// no need to specify path herea so web pack assumes its coming from node modules
+import 'materialize-css/dist/css/materialize.min.css';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
 // store takes an arrow function which is list of combined reducers initial state and middleware
