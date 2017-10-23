@@ -15,7 +15,13 @@ const App = () => {
     <div>
       <BrowserRouter>
         <div>
-          <Route path="/" component={Landing} />
+          <Header />
+          // react router goes recursively check all routes so when user clicks
+          /survey dashboard is shown it matches the path and shows local host //
+          sees only / //pass exact as property jsx assumes exact=true
+          <Route exact path="/" component={Landing} />
+          <Route eaxct path="/surveys" componet={Dashboard} />
+          <Route path="/surveys/new" component={SurveyNew} />
         </div>
       </BrowserRouter>
     </div>
