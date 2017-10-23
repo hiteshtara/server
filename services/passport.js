@@ -28,7 +28,7 @@ passport.deserializeUser((id, done) => {
 //mark with asynch
 //step 2
 // identify all the promises
-// add await to each promises
+// add await to each statement that produces promises
 async function fetchAlbumsEs6() {
   const res = await fetch('https://rallycoding.herokuapp.com/api/music_albums');
   const json = await res.json();
