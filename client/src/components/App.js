@@ -9,7 +9,7 @@ import * as actions from '../actions';
 // survey dashboard is shown it matches the path and shows local hos sees
 //  only pass exact as property jsx assumes exact=true
 
-const Dashboard = () => <h2>Dashboard</h2>;
+const Dashboard = () => <h2>Proposal Development </h2>;
 const SurveyNew = () => <h2>SurveyNew</h2>;
 const Landing = () => <h2>Landing</h2>;
 // web  pack is module loader all js files and make it one file it also process loaders into web pack
