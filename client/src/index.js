@@ -23,3 +23,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 registerServiceWorker();
+console.log('STRIPE KEY', process.env.REACT_APP_STRIPE_KEY);
+console.log('ENvironment', process.env.NODE_ENV);
