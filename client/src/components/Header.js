@@ -21,6 +21,7 @@ class Header extends Component {
           <li key="2">
             <Payments />
           </li>,
+          <li key="3">Credits:{this.props.auth.credits}</li>,
         ];
     }
   }
